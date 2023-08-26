@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CRUD</title>
+        <link rel="icon" type="image/x-icon" href="./employeeRecordIcon.png">
+        <link rel="stylesheet" href="./bootstrap.min.css">
+        <link rel="stylesheet" href="./myStyles.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light navbar_style">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Employee Record</a>
+            </div>
+          </nav> 
+        <div class="container">
+        <button type="button" class="btn bg-primary my-3"
+            id="showEmpForm">Add Employee</button>
+        <form class="form form-control emp-form-display-style mb-3" id="empForm">
+            <label for="empNameId">Name:</label>
+            <input type="text" id="empNameId" class="mt-3">
+            <br>
+            <label for="empAddressId">Address:</label>
+            <textarea id="empAddressId" class="mt-3"></textarea>
+            <br>
+            <label for="empCountryId">Country:</label>
+            <select id="empCountryId" class="mt-3">
+                <option>India</option>
+                <option>USA</option>
+                <option>Pakistan</option>
+                <option>UK</option>
+                <option>JAPAN</option>
+                <option>N.Korea</option>
+                <option>S.Korea</option>
+                <option>Australia</option>
+                <option>China</option>
+                <option>Germany</option>
+            </select>
+            <br>
+            <label for="empContactId">Contact:</label>
+            <input type="text" id="empContactId" class="mt-3">
+            <br>
+            <input type="hidden" id="empuniqueId" value="">
+            <input type="hidden" id="formType" value="">
+            <button type="button" id="submitBtn" class="btn bg-primary mt-3 mx-2 mb-3" onclick="fetchEmpRecord()">Submit</button>
+            <button type="button" id="resetButton" class="btn bg-danger mt-3 mx-2 mb-3" >Reset</button>
+            <button type="button" id="cancelBtn" class="btn bg-warning mt-3 mx-2 mb-3">Cancel</button>
+        </form>
+        <p  id="emptyFieldTag" class="text-danger emp-form-display-style">*Fields cannot be Empty</p>   
+        <table class="table table-bordered table-hover" id="tableId">
+        <thead class="thead">
+         <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Country</th>
+            <th>Contact No.</th>
+            <th>Actions</th>
+         </tr>
+        </thead>
+            <tbody id="empTableBody">
+            </tbody>
+        </table>
+         
+        </div>
+        <script src="./Script.js"></script>
+    </body>
+</html>
